@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">"VillaVerde"</string>
+    <string name="title_formulario_detail">"Formulario " Detail</string>
+    <string name="title_activity_lista">Lista</string>
+
+    <string name="roboto_regular">sans-serif</string>
+    <string name="roboto_medium">sans-serif-medium</string>
+
+
+    <string name="estado">Estado</string>
+    <string name="opcion1">AUSENTE</string>
+    <string name="opcion2">ESPERA</string>
+    <string name="opcion3">CHAPERÍA</string>
+    <string name="opcion4">PINTURA</string>
+    <string name="opcion5">TERMINACIONES</string>
+    <string name="opcion6">FINALIZADO</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>
