@@ -59,16 +59,16 @@ public class FormularioDetailFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.formulario_detail, container, false);
-
+        //if(mItem !=null){
+         //   return rootView;
+        //}
 
         // Show the dummy content as text in a TextView.
         //if (mItem != null) {
           //  ((TextView) rootView.findViewById(R.id.formulario_detail)).setText(mItem.id);
-           // Intent intent = new Intent (FormularioDetailFragment.this.getActivity(),Lista.class);
-            //startActivity(intent);
-        //}
+           //}
 
-
+/*
         if (mItem.id=="1")
         {
             ((TextView) rootView.findViewById(R.id.txta_formulario_detail)).setText(mItem.details);
@@ -79,7 +79,7 @@ public class FormularioDetailFragment extends Fragment {
             View view_entrada = inflater.inflate(R.layout.entrada, container, false);
             return view_entrada;
         }
-
+*/
         return rootView;
 
     }

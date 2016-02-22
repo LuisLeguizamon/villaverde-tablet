@@ -27,10 +27,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.luis.villaverde_tablet.FormularioListActivity" />
         </activity>
-        <activity
-            android:name=".Lista"
-            android:label="@string/title_activity_lista"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

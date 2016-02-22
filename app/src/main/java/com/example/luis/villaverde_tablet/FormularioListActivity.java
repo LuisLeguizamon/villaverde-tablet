@@ -46,14 +46,14 @@ public class FormularioListActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         toolbar.setTitle(getTitle());
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });
+        });*/
 
         View recyclerView = findViewById(R.id.formulario_list);
         assert recyclerView != null;
@@ -103,19 +103,25 @@ public class FormularioListActivity extends AppCompatActivity {
                         Bundle arguments = new Bundle();
                         arguments.putString(FormularioDetailFragment.ARG_ITEM_ID, holder.mItem.id);
                         if(holder.mItem.id=="1"){
-                            BlankFragment fragment_bla = new BlankFragment();
+                            Informes fragment = new Informes();
                             getSupportFragmentManager().beginTransaction()
-                                    .replace(R.id.formulario_detail_container, fragment_bla)
+                                    .replace(R.id.formulario_detail_container, fragment)
                                     .commit();
-
-
                         }
-                        else{
-                        FormularioDetailFragment fragment = new FormularioDetailFragment();
+
+                        else if(holder.mItem.id=="2"){
+                        Entrada fragment = new Entrada();
                         fragment.setArguments(arguments);
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.formulario_detail_container, fragment)
                                 .commit();}
+                        else{
+
+                            BlankFragment fragment = new BlankFragment();
+                            getSupportFragmentManager().beginTransaction()
+                                    .replace(R.id.formulario_detail_container, fragment)
+                                    .commit();
+                        }
                     } else {
                         Context context = v.getContext();
                         Intent intent = new Intent(context, FormularioDetailActivity.class);

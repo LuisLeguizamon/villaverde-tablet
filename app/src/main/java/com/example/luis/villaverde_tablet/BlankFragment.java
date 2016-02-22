@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link BlankFragment.OnFragmentInteractionListener} interface
+ * {@link BlankFragment OnFragmentInteractionListener} interface
  * to handle interaction events.
  * Use the {@link BlankFragment#newInstance} factory method to
  * create an instance of this fragment.
@@ -67,9 +67,9 @@ public class BlankFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_blank, container, false);
     }
 
-    /*
+
     // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
+    /*public void onButtonPressed(Uri uri) {
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);
         }
