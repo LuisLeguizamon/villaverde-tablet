@@ -115,9 +115,15 @@ public class FormularioListActivity extends AppCompatActivity {
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.formulario_detail_container, fragment)
                                 .commit();}
-                        else{
+                        else if(holder.mItem.id=="3"){
 
                             BlankFragment fragment = new BlankFragment();
+                            getSupportFragmentManager().beginTransaction()
+                                    .replace(R.id.formulario_detail_container, fragment)
+                                    .commit();
+                        }
+                        else if(holder.mItem.id=="4"){
+                            Talleres fragment = new Talleres();
                             getSupportFragmentManager().beginTransaction()
                                     .replace(R.id.formulario_detail_container, fragment)
                                     .commit();

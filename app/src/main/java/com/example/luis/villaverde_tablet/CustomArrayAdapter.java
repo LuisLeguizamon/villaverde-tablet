@@ -32,7 +32,7 @@ public class CustomArrayAdapter extends ArrayAdapter<Informes_lista> {
 
         //Comprobando si el View no existe
         if (null == convertView) {
-            //Si no existe, entonces inflarlo con image_list_view.xml
+            //Si no existe, entonces inflarlo con el xml
             listItemView = inflater.inflate(
                     R.layout.fragment_informes,
                     parent,

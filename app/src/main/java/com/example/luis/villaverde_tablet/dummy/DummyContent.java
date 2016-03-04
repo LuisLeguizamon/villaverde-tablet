@@ -36,6 +36,7 @@ public class DummyContent {
             addItem(new DummyItem("1","Informes","detalles 1"));
             addItem(new DummyItem("2","Crear informe","detalles 2"));
             addItem(new DummyItem("3","Subir informes","detalles 3"));
+            addItem(new DummyItem("4","Talleres","detalles 4"));
         //}
     }
 
