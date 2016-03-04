@@ -79,10 +79,19 @@ public class Talleres extends Fragment {
                 Toast.makeText(getContext(), "Number " + position, Toast.LENGTH_LONG).show();
                 Log.d("num:", String.valueOf(position));
 
-                BlankFragment fragment = new BlankFragment();
-                getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.formulario_detail_container,fragment)
-                        .commit();
+                if(position==0) {
+                    BlankFragment fragment = new BlankFragment();
+                    getActivity().getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.formulario_detail_container, fragment)
+                            .commit();
+                }
+
+                if(position==1){
+                    Informes fragment = new Informes();
+                    getActivity().getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.formulario_detail_container, fragment)
+                            .commit();
+                }
             }
         });
 
