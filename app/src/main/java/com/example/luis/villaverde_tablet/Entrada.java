@@ -1,5 +1,6 @@
 package com.example.luis.villaverde_tablet;
 
+import android.app.DialogFragment;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
@@ -7,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 
 /**
@@ -26,7 +28,7 @@ public class Entrada extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
+    Button bDatepicker;
    // private OnFragmentInteractionListener mListener;
 
     public Entrada() {
@@ -58,13 +60,29 @@ public class Entrada extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_entrada, container, false);
+        View view= inflater.inflate(R.layout.fragment_entrada, container,false);
+        bDatepicker=(Button)view.findViewById(R.id.bDatepicker);
+        bDatepicker.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                showDatePickerDialog(view);
+            }
+        });
+
+
+        return view;
+    }
+
+    public void showDatePickerDialog(View v) {
+        DialogFragment newFragment = new DatePickerFragment();
+        newFragment.show(getActivity().getFragmentManager(), "datePicker");
     }
 
     // TODO: Rename method, update argument and hook method into UI event
